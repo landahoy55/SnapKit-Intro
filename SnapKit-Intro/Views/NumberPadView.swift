@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 import SnapKit
+import Bond
+import ReactiveKit
 
 class NumberPadView: UIView {
+
     
     //var button = UIButton(type: .system)
     let numPadStackView: UIStackView = {
@@ -26,10 +29,8 @@ class NumberPadView: UIView {
     override init(frame: CGRect) {
     
         super.init(frame: frame)
-        //self.backgroundColor = UIColor(r: 57, g:207, b:252)
         createSubviews()
-        
-    
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,10 +38,15 @@ class NumberPadView: UIView {
         createSubviews()
     }
 
+    var answer = Observable<String?>("0")
     
     @objc func handleTap(sender: UIButton) {
         
         let tag = sender.tag
+        
+        
+        answer.value = "\(tag)"
+        //answer.input = "\(tag)"
         
         print("Tapped: \(tag)")
     }

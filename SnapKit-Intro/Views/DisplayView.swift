@@ -8,14 +8,17 @@
 
 import UIKit
 import SnapKit
+import Bond
+import ReactiveKit
 
 class DisplayView: UIView {
+    
+    var label = Observable("a")
     
     let outputLabel: UILabel = {
        let lbl = UILabel()
             lbl.font = UIFont(name: "Rubik-Bold", size: 72)
             lbl.textColor = .black
-            lbl.text = "18"
             lbl.textAlignment = .center
             lbl.backgroundColor = .yellow
        return lbl
@@ -23,7 +26,10 @@ class DisplayView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        outputLabel.text = label.value
         setup()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,15 +38,12 @@ class DisplayView: UIView {
     }
     
     fileprivate func setup() {
-
         self.addSubview(outputLabel)
         outputLabel.snp.makeConstraints { (make) in
             make.height.equalTo(100)
             make.width.equalTo(200)
             make.center.equalToSuperview()
         }
-        
-        
     }
     
 }

@@ -13,6 +13,8 @@
 		F0125A7B220CBBD300469277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0125A79220CBBD300469277 /* Main.storyboard */; };
 		F0125A7D220CBBD500469277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0125A7C220CBBD500469277 /* Assets.xcassets */; };
 		F0125A80220CBBD500469277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0125A7E220CBBD500469277 /* LaunchScreen.storyboard */; };
+		F02C4865220F156800F6F8F6 /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C4864220F156800F6F8F6 /* AnswerViewModel.swift */; };
+		F02C4867220F30C900F6F8F6 /* DisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C4866220F30C900F6F8F6 /* DisplayViewModel.swift */; };
 		F0ADC4B9220CC0F30030C487 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4B8220CC0F30030C487 /* NumberPadView.swift */; };
 		F0ADC4BE220DF8E00030C487 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4BD220DF8E00030C487 /* UIColor + Extensions.swift */; };
 		F0ADC4D4220DFC230030C487 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0ADC4CA220DFC210030C487 /* Rubik-BoldItalic.ttf */; };
@@ -27,6 +29,8 @@
 		F0ADC4DD220DFC230030C487 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0ADC4D3220DFC230030C487 /* Rubik-Regular.ttf */; };
 		F0ADC4DF220E33100030C487 /* PadBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4DE220E33100030C487 /* PadBtn.swift */; };
 		F0ADC4E1220EE9090030C487 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4E0220EE9090030C487 /* DisplayView.swift */; };
+		F0ADC4E4220EF03E0030C487 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4E3220EF03E0030C487 /* Answer.swift */; };
+		F0AE5243220F68C000463758 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE5242220F68C000463758 /* QuizViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,8 @@
 		F0125A7C220CBBD500469277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0125A7F220CBBD500469277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0125A81220CBBD500469277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F02C4864220F156800F6F8F6 /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
+		F02C4866220F30C900F6F8F6 /* DisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewModel.swift; sourceTree = "<group>"; };
 		F0ADC4B8220CC0F30030C487 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		F0ADC4BD220DF8E00030C487 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		F0ADC4CA220DFC210030C487 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		F0ADC4D3220DFC230030C487 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		F0ADC4DE220E33100030C487 /* PadBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadBtn.swift; sourceTree = "<group>"; };
 		F0ADC4E0220EE9090030C487 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		F0ADC4E3220EF03E0030C487 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		F0AE5242220F68C000463758 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +114,14 @@
 		F0125A74220CBBD300469277 /* SnapKit-Intro */ = {
 			isa = PBXGroup;
 			children = (
+				F0ADC4E5220EF25D0030C487 /* ViewModel */,
 				F0ADC4BF220DFBD30030C487 /* Fonts */,
 				F0ADC4BC220DF8780030C487 /* Extensions */,
 				F0ADC4BB220DF58C0030C487 /* Constants */,
 				F0ADC4BA220DF5860030C487 /* Views */,
 				F0125A75220CBBD300469277 /* AppDelegate.swift */,
 				F0125A77220CBBD300469277 /* ViewController.swift */,
+				F0ADC4E2220EF00D0030C487 /* Model */,
 				F0125A79220CBBD300469277 /* Main.storyboard */,
 				F0125A7C220CBBD500469277 /* Assets.xcassets */,
 				F0125A7E220CBBD500469277 /* LaunchScreen.storyboard */,
@@ -162,6 +172,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F0ADC4E2220EF00D0030C487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0ADC4E3220EF03E0030C487 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0ADC4E5220EF25D0030C487 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F02C4864220F156800F6F8F6 /* AnswerViewModel.swift */,
+				F02C4866220F30C900F6F8F6 /* DisplayViewModel.swift */,
+				F0AE5242220F68C000463758 /* QuizViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,7 +201,7 @@
 				F0125A6E220CBBD300469277 /* Sources */,
 				F0125A6F220CBBD300469277 /* Frameworks */,
 				F0125A70220CBBD300469277 /* Resources */,
-				0696EA7A36BDC0BA00FA808A /* [CP] Embed Pods Frameworks */,
+				5AD4C9A4B615E42AF25855C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,17 +269,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0696EA7A36BDC0BA00FA808A /* [CP] Embed Pods Frameworks */ = {
+		5AD4C9A4B615E42AF25855C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SnapKit-Intro/Pods-SnapKit-Intro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +321,11 @@
 				F0ADC4B9220CC0F30030C487 /* NumberPadView.swift in Sources */,
 				F0ADC4BE220DF8E00030C487 /* UIColor + Extensions.swift in Sources */,
 				F0125A78220CBBD300469277 /* ViewController.swift in Sources */,
+				F0AE5243220F68C000463758 /* QuizViewModel.swift in Sources */,
+				F0ADC4E4220EF03E0030C487 /* Answer.swift in Sources */,
+				F02C4865220F156800F6F8F6 /* AnswerViewModel.swift in Sources */,
 				F0ADC4E1220EE9090030C487 /* DisplayView.swift in Sources */,
+				F02C4867220F30C900F6F8F6 /* DisplayViewModel.swift in Sources */,
 				F0125A76220CBBD300469277 /* AppDelegate.swift in Sources */,
 				F0ADC4DF220E33100030C487 /* PadBtn.swift in Sources */,
 			);
