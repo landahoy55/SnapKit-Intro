@@ -13,17 +13,27 @@ import ReactiveKit
 
 class QuizViewModel {
     
-    var answer = Observable<String?>("0")
-    
-    private let answerViewModel = AnswerViewModel()
+    private let inputVM = InputViewModel()
     private let displayViewModel = DisplayViewModel()
+
+    var answer = Observable<Int?>(0)
+    var total = Observable<Int>(0)
     
     init() {
-        //self.answerViewModel = answerViewModel
-        //self.displayViewModel = displayViewModel
+        bindViewModels()
+    }
+    
+    func bindViewModels() {
         
-        answerViewModel.answer.bidirectionalBind(to: answer)
-        displayViewModel.display.bidirectionalBind(to: answer)
+        inputVM.inputAnswer.bidirectionalBind(to: answer)
+        inputVM.total.bind(to: total)
+        //total.bind(to: inputVM.)
+        //total.bind(to: inputVM.total)
+        
+        //Observing...
+        self.total.observeNext { (Int) in
+            print("Observing")
+        }
         
     }
     

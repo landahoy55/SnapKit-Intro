@@ -15,8 +15,18 @@ class ViewController: UIViewController {
    
     var display = DisplayView()
     var pad = NumberPadView()
+    
     var vm = QuizViewModel()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        setup()
+        contraints()
+        bindViewModel()
+        
+    }
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -26,27 +36,14 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    
     func bindViewModel(){
-        vm.answer.bind(to: display.outputLabel.reactive.text)
-        vm.answer.bidirectionalBind(to: pad.answer )
+        
+        vm.answer.bidirectionalBind(to: pad.answer)
+        
+        //vm.toDisplay.bind(to: display.outputLabel.reactive.text)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-        setup()
-        contraints()
-        bindViewModel()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) { // Change `2.0` to the desired number of seconds.
-            // Code you want to be delayed
-            //self.displayViewModel.display = Observable<String?>("777")
-            //print("7s?: ", self.displayViewModel.display.value)
-            //self.display.outputLabel.text = self.displayViewModel.display.value
-        }
-    }
-
     func setup() {
          view.addSubview(display)
          view.addSubview(pad)
@@ -57,7 +54,7 @@ class ViewController: UIViewController {
         display.snp.makeConstraints { (make) in
             make.height.equalTo(self.view).dividedBy(2)
             make.left.equalTo(self.view).offset(20)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(-20)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(0)
             make.right.equalTo(self.view).offset(-20)
         }
         

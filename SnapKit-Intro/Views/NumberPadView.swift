@@ -38,14 +38,14 @@ class NumberPadView: UIView {
         createSubviews()
     }
 
-    var answer = Observable<String?>("0")
+    var answer = Observable<Int?>(0)
     
     @objc func handleTap(sender: UIButton) {
         
         let tag = sender.tag
         
         
-        answer.value = "\(tag)"
+        answer.value = tag
         //answer.input = "\(tag)"
         
         print("Tapped: \(tag)")
@@ -59,7 +59,7 @@ class NumberPadView: UIView {
     }
     
     func createSubviews() {
-    
+        //self.backgroundColor = .green
         createButtons()
         contraints()
     }

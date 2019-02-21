@@ -27,7 +27,7 @@ class PadBtn: UIButton {
         self.titleLabel?.font = UIFont(name: "Rubik-Bold", size: 72)
         self.titleLabel?.textAlignment = NSTextAlignment.center
         self.setTitleColor(.white, for: .normal)
-        self.backgroundColor = UIColor(r: 228, g: 61, b: 106)
+        self.backgroundColor = UIColor.CustomColors.Pinks.Middle
         self.layer.cornerRadius = 7
         
         //shadows

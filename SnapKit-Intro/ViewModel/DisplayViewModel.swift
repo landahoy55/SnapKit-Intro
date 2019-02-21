@@ -12,13 +12,26 @@ import ReactiveKit
 
 class DisplayViewModel {
     
-    var display = Observable<String?>("0")
+    var display = Observable<Int?>(0) {
+        didSet {
+            print("Display View Model Did Set")
+            self.convertIntToString()
+        }
+    }
+    var displayString = Observable<String?>("0")
     
     init() {
+        
         _ = display.observeNext(with: { (str) in
-            print("Display View Model - update", str)
+            //print("Display View Model:", str)
         })
 
+    }
+
+    private func convertIntToString() {
+        guard let value = display.value else { return }
+        displayString.value = "\(value)"
+        
     }
 
 }
