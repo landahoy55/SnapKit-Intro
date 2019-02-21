@@ -39,9 +39,9 @@ class ViewController: UIViewController {
     
     func bindViewModel(){
         
-        vm.answer.bidirectionalBind(to: pad.answer)
-        
-        //vm.toDisplay.bind(to: display.outputLabel.reactive.text)
+        vm.inputNumber.bidirectionalBind(to: pad.answer)
+        vm.onScreenTotal.bind(to: display.outputLabel.reactive.text)
+    
     }
     
     func setup() {

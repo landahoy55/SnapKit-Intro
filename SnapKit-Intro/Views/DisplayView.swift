@@ -13,7 +13,7 @@ import ReactiveKit
 
 class DisplayView: UIView {
     
-    var label = Observable<Int?>(0)
+    //var label = Observable<Int?>(0)
     
     let outputLabel: UILabel = {
        let lbl = UILabel()
@@ -37,7 +37,7 @@ class DisplayView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        outputLabel.text = "\(String(describing: label.value))"
+        //outputLabel.text = "\(String(describing: label.value))"
         setup()
         
     }

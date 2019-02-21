@@ -16,8 +16,8 @@ class QuizViewModel {
     private let inputVM = InputViewModel()
     private let displayViewModel = DisplayViewModel()
 
-    var answer = Observable<Int?>(0)
-    var total = Observable<Int>(0)
+    var inputNumber = Observable<Int?>(0)
+    var onScreenTotal = Observable<String?>("0")
     
     init() {
         bindViewModels()
@@ -25,15 +25,8 @@ class QuizViewModel {
     
     func bindViewModels() {
         
-        inputVM.inputAnswer.bidirectionalBind(to: answer)
-        inputVM.total.bind(to: total)
-        //total.bind(to: inputVM.)
-        //total.bind(to: inputVM.total)
-        
-        //Observing...
-        self.total.observeNext { (Int) in
-            print("Observing")
-        }
+        inputVM.inputAnswer.bidirectionalBind(to: inputNumber)
+        inputVM.stringTotal.bind(to: onScreenTotal)
         
     }
     
