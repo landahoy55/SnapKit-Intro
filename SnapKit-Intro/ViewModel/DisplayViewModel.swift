@@ -21,17 +21,19 @@ class DisplayViewModel {
     var displayString = Observable<String?>("0")
     
     init() {
-        
-        _ = display.observeNext(with: { (str) in
-            //print("Display View Model:", str)
-        })
-
+        setObservers()
     }
 
     private func convertIntToString() {
         guard let value = display.value else { return }
         displayString.value = "\(value)"
         
+    }
+    
+    func setObservers() {
+        _ = display.observeNext(with: { (str) in
+            //print("Display View Model:", str)
+        })
     }
 
 }

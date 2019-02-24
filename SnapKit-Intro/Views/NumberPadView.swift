@@ -25,6 +25,7 @@ class NumberPadView: UIView {
         
         return sv
     }()
+
     
     override init(frame: CGRect) {
     
@@ -91,26 +92,16 @@ class NumberPadView: UIView {
         numPadStackView.addArrangedSubview(bottomNumPadRow)
         
         let zeroButton = createNumberedButton(number: 0)
+        let clearButton = createActionButton(backgroundColour: .red, title: "Clear")
+        let confirmButton = createActionButton(backgroundColour: .green, title: "Go")
         
-        zeroButton.snp.makeConstraints { (make) in
-            make.height.width.equalTo(85)
+        let bottomRow = [clearButton, zeroButton, confirmButton]
+        
+        bottomRow.forEach { btn in
+            btn.numberPadHeightWidthContraints(size: 85)
+            bottomNumPadRow.addArrangedSubview(btn)
         }
         
-        let leftview = UIView()
-        leftview.snp.makeConstraints { (make) in
-            make.height.width.equalTo(85)
-        }
-        
-        let rightview = UIView()
-        
-        
-        rightview.snp.makeConstraints { (make) in
-            make.height.width.equalTo(85)
-        }
-        
-        bottomNumPadRow.addArrangedSubview(leftview)
-        bottomNumPadRow.addArrangedSubview(zeroButton)
-        bottomNumPadRow.addArrangedSubview(rightview)
     }
     
     func createHorizontalStackView() -> UIStackView {
@@ -125,7 +116,6 @@ class NumberPadView: UIView {
         
         return numPadRow
     }
-    
     
     
     func createNumberedButton(number: Int) -> UIButton {
@@ -154,9 +144,8 @@ class NumberPadView: UIView {
             btn.tag = number
             //add three to stackview
             
-            btn.snp.makeConstraints { (make) in
-                make.height.width.equalTo(85)
-            }
+            btn.numberPadHeightWidthContraints(size: 85)
+            
             return btn
         }()
         
@@ -164,4 +153,27 @@ class NumberPadView: UIView {
         
         return button
     }
+    
+    func createActionButton(backgroundColour: UIColor, title: String) -> UIButton {
+        
+        let button: UIButton = {
+            let btn = UIButton()
+            btn.backgroundColor = backgroundColour
+            btn.setTitle(title, for: .normal)
+            return btn
+        }()
+        
+        return button
+    }
+    
+}
+
+extension UIView {
+    
+    func numberPadHeightWidthContraints(size: Int) {
+        self.snp.makeConstraints { (make) in
+            make.height.width.equalTo(size)
+        }
+    }
+    
 }

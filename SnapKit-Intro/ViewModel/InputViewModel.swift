@@ -13,24 +13,26 @@ import ReactiveKit
 class InputViewModel {
     
     var inputAnswer = Observable<Int?>(0)
- 
     var stringTotal = Observable<String?>("0")
     
+    
     init() {
-        _ = inputAnswer.observeNext(with: { (ans) in            
-            guard let answer = ans else { return }
-            self.addToTotal(answer: answer)
-        })
+        setObservers()
     }
 
-    var tempInput = Observable("0")
+    private var tempInput = Observable("0")
     
-    func addToTotal(answer: Int){
+     func addToTotal(answer: Int) {
         
         tempInput.value += "\(answer)"
         stringTotal.value = self.tempInput.value.replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
-        
-        
+    }
+    
+    func setObservers() {
+        _ = inputAnswer.observeNext(with: { (ans) in
+            guard let answer = ans else { return }
+            self.addToTotal(answer: answer)
+        })
     }
 
 }

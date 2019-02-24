@@ -23,7 +23,7 @@ class QuizViewModel {
         bindViewModels()
     }
     
-    func bindViewModels() {
+    private func bindViewModels() {
         
         inputVM.inputAnswer.bidirectionalBind(to: inputNumber)
         inputVM.stringTotal.bind(to: onScreenTotal)
