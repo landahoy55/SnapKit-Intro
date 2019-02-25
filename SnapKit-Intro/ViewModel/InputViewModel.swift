@@ -25,7 +25,11 @@ class InputViewModel {
      func addToTotal(answer: Int) {
         
         tempInput.value += "\(answer)"
-        stringTotal.value = self.tempInput.value.replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+        stringTotal.value = self.tempInput.value.replacingOccurrences(
+            of: "^0+",
+            with: "",
+            options: .regularExpression
+        )
     }
     
     func setObservers() {

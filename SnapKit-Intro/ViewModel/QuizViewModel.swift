@@ -14,7 +14,7 @@ import ReactiveKit
 class QuizViewModel {
     
     private let inputVM = InputViewModel()
-    private let displayViewModel = DisplayViewModel()
+    //private let displayViewModel = DisplayViewModel()
 
     var inputNumber = Observable<Int?>(0)
     var onScreenTotal = Observable<String?>("0")

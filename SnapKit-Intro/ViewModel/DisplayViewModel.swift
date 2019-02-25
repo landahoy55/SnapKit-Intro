@@ -32,7 +32,7 @@ class DisplayViewModel {
     
     func setObservers() {
         _ = display.observeNext(with: { (str) in
-            //print("Display View Model:", str)
+            print("Display View Model:", str)
         })
     }
 

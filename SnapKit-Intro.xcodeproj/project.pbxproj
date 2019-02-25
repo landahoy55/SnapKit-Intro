@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		332CA6324F099F73C380C025 /* Pods_SnapKit_Intro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDAE0183AD60AB9B78FC8B9 /* Pods_SnapKit_Intro.framework */; };
 		F0125A76220CBBD300469277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0125A75220CBBD300469277 /* AppDelegate.swift */; };
-		F0125A78220CBBD300469277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0125A77220CBBD300469277 /* ViewController.swift */; };
-		F0125A7B220CBBD300469277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0125A79220CBBD300469277 /* Main.storyboard */; };
+		F0125A78220CBBD300469277 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0125A77220CBBD300469277 /* QuizViewController.swift */; };
 		F0125A7D220CBBD500469277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0125A7C220CBBD500469277 /* Assets.xcassets */; };
 		F0125A80220CBBD500469277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0125A7E220CBBD500469277 /* LaunchScreen.storyboard */; };
 		F02C4865220F156800F6F8F6 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C4864220F156800F6F8F6 /* InputViewModel.swift */; };
@@ -32,6 +31,8 @@
 		F0ADC4E4220EF03E0030C487 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADC4E3220EF03E0030C487 /* Answer.swift */; };
 		F0AE5243220F68C000463758 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE5242220F68C000463758 /* QuizViewModel.swift */; };
 		F0AE524B220F70EE00463758 /* SnapKit_IntroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE524A220F70EE00463758 /* SnapKit_IntroTests.swift */; };
+		F0E82B3722248275009A4171 /* InputViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E82B3622248275009A4171 /* InputViewModelTests.swift */; };
+		F0E82B39222482AA009A4171 /* DisplayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E82B38222482AA009A4171 /* DisplayViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,7 @@
 		ABDAE0183AD60AB9B78FC8B9 /* Pods_SnapKit_Intro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapKit_Intro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0125A72220CBBD300469277 /* SnapKit-Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SnapKit-Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0125A75220CBBD300469277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0125A77220CBBD300469277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F0125A7A220CBBD300469277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0125A77220CBBD300469277 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		F0125A7C220CBBD500469277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0125A7F220CBBD500469277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0125A81220CBBD500469277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		F0AE5248220F70ED00463758 /* SnapKit-IntroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SnapKit-IntroTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AE524A220F70EE00463758 /* SnapKit_IntroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKit_IntroTests.swift; sourceTree = "<group>"; };
 		F0AE524C220F70EE00463758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0E82B3622248275009A4171 /* InputViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModelTests.swift; sourceTree = "<group>"; };
+		F0E82B38222482AA009A4171 /* DisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +145,8 @@
 				F0ADC4BC220DF8780030C487 /* Extensions */,
 				F0ADC4BB220DF58C0030C487 /* Constants */,
 				F0125A75220CBBD300469277 /* AppDelegate.swift */,
-				F0125A77220CBBD300469277 /* ViewController.swift */,
+				F0125A77220CBBD300469277 /* QuizViewController.swift */,
 				F0ADC4E2220EF00D0030C487 /* Model */,
-				F0125A79220CBBD300469277 /* Main.storyboard */,
 				F0125A7C220CBBD500469277 /* Assets.xcassets */,
 				F0125A7E220CBBD500469277 /* LaunchScreen.storyboard */,
 				F0125A81220CBBD500469277 /* Info.plist */,
@@ -218,6 +219,8 @@
 			children = (
 				F0AE524A220F70EE00463758 /* SnapKit_IntroTests.swift */,
 				F0AE524C220F70EE00463758 /* Info.plist */,
+				F0E82B3622248275009A4171 /* InputViewModelTests.swift */,
+				F0E82B38222482AA009A4171 /* DisplayViewModelTests.swift */,
 			);
 			path = "SnapKit-IntroTests";
 			sourceTree = "<group>";
@@ -314,7 +317,6 @@
 				F0125A7D220CBBD500469277 /* Assets.xcassets in Resources */,
 				F0ADC4D9220DFC230030C487 /* Rubik-Black.ttf in Resources */,
 				F0ADC4D8220DFC230030C487 /* Rubik-BlackItalic.ttf in Resources */,
-				F0125A7B220CBBD300469277 /* Main.storyboard in Resources */,
 				F0ADC4DD220DFC230030C487 /* Rubik-Regular.ttf in Resources */,
 				F0ADC4DB220DFC230030C487 /* Rubik-MediumItalic.ttf in Resources */,
 				F0ADC4DA220DFC230030C487 /* Rubik-Medium.ttf in Resources */,
@@ -382,7 +384,7 @@
 			files = (
 				F0ADC4B9220CC0F30030C487 /* NumberPadView.swift in Sources */,
 				F0ADC4BE220DF8E00030C487 /* UIColor + Extensions.swift in Sources */,
-				F0125A78220CBBD300469277 /* ViewController.swift in Sources */,
+				F0125A78220CBBD300469277 /* QuizViewController.swift in Sources */,
 				F0AE5243220F68C000463758 /* QuizViewModel.swift in Sources */,
 				F0ADC4E4220EF03E0030C487 /* Answer.swift in Sources */,
 				F02C4865220F156800F6F8F6 /* InputViewModel.swift in Sources */,
@@ -398,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AE524B220F70EE00463758 /* SnapKit_IntroTests.swift in Sources */,
+				F0E82B3722248275009A4171 /* InputViewModelTests.swift in Sources */,
+				F0E82B39222482AA009A4171 /* DisplayViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +416,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F0125A79220CBBD300469277 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F0125A7A220CBBD300469277 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F0125A7E220CBBD500469277 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

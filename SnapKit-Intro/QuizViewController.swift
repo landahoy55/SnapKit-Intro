@@ -11,7 +11,7 @@ import SnapKit
 import Bond
 import ReactiveKit
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
    
     var display = DisplayView()
     var pad = NumberPadView()
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     }
     
     func setup() {
+         self.view.backgroundColor = .white
          view.addSubview(display)
          view.addSubview(pad)
     }
